@@ -1,135 +1,362 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>L’onglerie enchantée · Prothésiste ongulaire à Ambérieu-en-Bugey</title><meta name="robots" content="noindex,nofollow">
-<meta name="description" content="L’onglerie enchantée, prothésiste ongulaire à Ambérieu-en-Bugey. Des ongles soignés qui tiennent, posés avec précision.">
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>L'onglerie enchantée · Prothésiste ongulaire à Ambérieu-en-Bugey</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="L'onglerie enchantée, prothésiste ongulaire à Ambérieu-en-Bugey : extensions d'ongles, nail art, semi-permanent et soin des mains, sur rendez-vous.">
+<meta name="theme-color" content="#3a2230">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500&display=swap">
-<style>:root{--bg:#f8efea;--sf:#fffaf7;--ink:#2f1f1c;--acc:#b35a4d;--acc2:#7a8b6f;--on-acc:#ffffff;--disp:'DM Serif Display',Georgia,serif;--body:'DM Sans',system-ui,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden;--line:color-mix(in srgb,var(--ink) 12%,transparent);--mut:color-mix(in srgb,var(--ink) 65%,transparent);--e:cubic-bezier(.2,.8,.2,1)}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root{
+  --petal:#f8ebe7;      /* fond */
+  --blush:#efd3d3;      /* surfaces douces */
+  --rose:#b76e79;       /* rose gold */
+  --rose-deep:#94505c;
+  --gold:#c9a44c;       /* or */
+  --champagne:#f4ddb0;
+  --plum:#3a2230;       /* texte */
+  --plum-soft:#6e4a5a;
+  --script:"Pinyon Script",cursive;
+  --sans:"Jost",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.24,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--petal);color:var(--plum);font:300 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
-.in{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
-nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav .in{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--disp);font-size:1.1rem;min-width:0}
-.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.logo-mark{width:36px;height:36px;flex-shrink:0}
-.links{display:flex;gap:22px;font-size:.92rem}.links a{text-decoration:none;opacity:.7}.links a:hover{opacity:1}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;background:var(--acc);color:var(--on-acc);text-decoration:none;font-weight:600;font-size:.95rem;position:relative;overflow:hidden;transition:transform .3s var(--e),box-shadow .3s var(--e);white-space:nowrap}
-.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px var(--acc)}
-.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--e)}
-.btn:hover::after{transform:translateX(120%)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn.sm{padding:9px 16px;font-size:.88rem}.btn.big{padding:16px 28px;font-size:1.02rem}
-.hero{position:relative;overflow:hidden;padding:76px 0 70px}
-.deco{position:absolute;inset:0;pointer-events:none}
-.deco::before,.deco::after{content:"";position:absolute;border-radius:50%;filter:blur(40px);opacity:.25;animation:fl 16s ease-in-out infinite alternate}
-.deco::before{width:520px;height:520px;right:-120px;top:-160px;background:var(--acc)}
-.deco::after{width:380px;height:380px;left:-140px;bottom:-200px;background:var(--acc2);animation-duration:20s}
-@keyframes fl{to{transform:translate(-40px,40px) scale(1.12)}}
-.hgrid{position:relative;display:grid;grid-template-columns:1.4fr .8fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--acc);opacity:0;animation:up .8s var(--e) .1s forwards}
-.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
-h1{font-family:var(--disp);font-weight:inherit;font-size:clamp(2.5rem,7.5vw,5.6rem);line-height:1.02;margin:18px 0 22px;text-wrap:balance}
-h1 .w{display:inline-block;opacity:0;transform:translateY(55%) rotate(3deg);animation:wd .9s var(--e) forwards;animation-delay:calc(.2s + var(--i)*.08s)}
-@keyframes wd{to{opacity:1;transform:none}}@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.tag{font-size:clamp(1.05rem,2.2vw,1.28rem);max-width:36ch;margin:0 0 30px;color:var(--mut);opacity:0;animation:up .8s var(--e) .6s forwards}
-.cta{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:up .8s var(--e) .75s forwards}
-.hcard{background:var(--sf);border:1px solid var(--line);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:14px;box-shadow:0 30px 60px -30px color-mix(in srgb,var(--ink) 35%,transparent);transform:rotate(-2deg)}
-.hcard .logo-mark{width:72px;height:72px;animation:spin 1.2s var(--e) .3s both}
-@keyframes spin{from{transform:scale(.4) rotate(-90deg);opacity:0}}
-.hc-name{font-family:var(--disp);font-size:1.6rem;line-height:1.1}
-.rate{display:flex;align-items:baseline;gap:8px}.rate b{font-family:var(--disp);font-size:2.4rem;color:var(--acc);line-height:1}.rate span{font-size:.85rem;color:var(--mut)}
-.today{display:flex;justify-content:space-between;gap:10px;padding:10px 14px;border-radius:12px;background:color-mix(in srgb,var(--acc) 10%,transparent);font-size:.9rem}
-.today span{color:var(--mut)}
-.hc-town{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
-.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--sf)}
-.marq div{display:inline-block;font-family:var(--disp);font-size:1.35rem;animation:mq 28s linear infinite;padding-right:30px}
-@keyframes mq{to{transform:translateX(-100%)}}
-section{padding-top:84px;padding-bottom:0}
-h2{font-family:var(--disp);font-weight:inherit;font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.1;margin:0 0 34px;text-wrap:balance}
-.srv{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.srv li{background:var(--sf);border:1px solid var(--line);border-radius:20px;padding:28px 24px;position:relative;overflow:hidden;transition:transform .4s var(--e)}
-.srv li::before{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--acc);transition:width .5s var(--e)}
-.srv li:hover{transform:translateY(-6px)}.srv li:hover::before{width:100%}
-.srv .n{font-size:.8rem;font-weight:700;color:var(--acc);letter-spacing:.1em}
-.srv h3{font-family:var(--disp);font-weight:inherit;font-size:1.4rem;margin:12px 0 0;line-height:1.2}
-.band{padding-top:84px}
-.band .in>div,.band .in{display:flex}
-.band .in{align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--acc);color:var(--on-acc);border-radius:28px;padding:40px max(28px,4vw);max-width:1080px}
-.band b{font-family:var(--disp);font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:inherit;display:block}
-.band p{margin:6px 0 0;opacity:.85;max-width:46ch}
-.band .in>div{display:block}
-.band .btn{background:var(--on-acc);color:var(--acc)}
-.urg-l{display:block}.pulse{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--on-acc);margin-bottom:10px;animation:pu 1.6s infinite}
-@keyframes pu{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--on-acc) 60%,transparent)}100%{box-shadow:0 0 0 16px transparent}}
-.steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
-.steps li{counter-increment:s;padding:26px;border-top:3px solid var(--acc);background:var(--sf);border-radius:0 0 18px 18px}
-.steps li::before{content:counter(s);font-family:var(--disp);font-size:2.4rem;color:var(--acc);display:block;line-height:1}
-.steps b{display:block;margin:10px 0 6px;font-size:1.1rem}.steps span{color:var(--mut)}
-.gallery .ph{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
-.phi{aspect-ratio:4/3;max-width:100%;border-radius:18px;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--acc) 14%,var(--sf)) 0 14px,var(--sf) 14px 28px);display:flex;align-items:flex-end;padding:14px;font-size:.8rem;color:var(--mut);border:1px dashed var(--line)}
-.hint{font-size:.85rem;color:var(--mut);margin:12px 0 0}
-.praise .chips{display:flex;flex-wrap:wrap;gap:12px}
-.chip{font-family:var(--disp);font-size:clamp(1.2rem,2.6vw,1.7rem);padding:14px 24px;border-radius:999px;border:1.5px solid var(--acc);color:var(--ink);background:color-mix(in srgb,var(--acc) 8%,transparent)}
-.src{font-size:.85rem;color:var(--mut);margin:14px 0 0}
-.info{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}
-.box{background:var(--sf);border:1px solid var(--line);border-radius:24px;padding:30px}
-.box h3{font-family:var(--disp);font-weight:inherit;font-size:1.5rem;margin:0 0 14px}
-.hours{list-style:none;margin:0;padding:0}.hours li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dashed var(--line);font-variant-numeric:tabular-nums}
-.hours li:last-child{border:0}.hours li.today{color:var(--acc);font-weight:700}
-.big{font-family:var(--disp);font-size:clamp(1.5rem,3.6vw,2.1rem);text-decoration:none;display:block;margin:8px 0 18px;color:var(--acc);overflow-wrap:anywhere}
-footer{margin-top:90px;padding:34px 0 100px;border-top:1px solid var(--line);font-size:.9rem;color:var(--mut)}
-footer .in{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}footer .brand{color:var(--ink)}
-.mz{position:fixed;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;background:#111;color:#fff;font:500 12px/1.3 system-ui,sans-serif;padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25);width:max-content;max-width:calc(100vw - 24px)}
-.mz a{color:#fff}
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--e),transform .8s var(--e);transition-delay:calc(var(--i,0)*.08s)}
-.js .rv.in-v{opacity:1;transform:none}
-.js .hcard.rv.in-v{transform:rotate(-2deg)}
-/* ---- L1 : affiche ---- */
-.L1 .hero{background:var(--acc);color:var(--on-acc);text-align:center;padding:90px 0 80px}
-.L1 .hgrid{grid-template-columns:1fr;justify-items:center}
-.L1 .eyebrow{color:var(--on-acc);justify-content:center}.L1 .tag{color:var(--on-acc);opacity:.85;margin-inline:auto}
-.L1 .cta{justify-content:center}.L1 .hero .btn{background:var(--on-acc);color:var(--acc)}.L1 .hero .btn.ghost{background:transparent;color:var(--on-acc);border-color:color-mix(in srgb,var(--on-acc) 40%,transparent)}
-.L1 h1{font-size:clamp(2.8rem,10vw,7rem)}
-.L1 .hcard{display:none}.L1 .deco::before{background:var(--acc2);opacity:.35}.L1 .deco::after{background:var(--on-acc);opacity:.12}
-.L1 .srv li{border-radius:0;border-width:0 0 0 3px;border-color:var(--acc)}
-/* ---- L2 : éditorial ---- */
-.L2 .hgrid{grid-template-columns:1fr 260px}
-.L2 .hcard{transform:none;border-radius:0;border-width:0 0 0 4px;border-color:var(--acc);box-shadow:none;background:transparent}
-.L2 .js .hcard.rv.in-v,.js .L2 .hcard.rv.in-v{transform:none}
-.L2 h1{font-style:italic}
-.L2 .srv{grid-template-columns:1fr 1fr;gap:0}
-.L2 .srv li{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;display:flex;gap:18px;align-items:baseline}
-.L2 .srv h3{margin:0}
-.L2 .marq{background:var(--acc);color:var(--on-acc);border:0}
-/* ---- mobile ---- */
-@media (max-width:820px){.hgrid,.L2 .hgrid{grid-template-columns:1fr}.hcard{transform:none;max-width:420px}.js .hcard.rv.in-v{transform:none}.links{display:none}.info{grid-template-columns:1fr}.steps ol{grid-template-columns:1fr}.gallery .ph{grid-template-columns:1fr 1fr}.gallery .phi:first-child{grid-column:1/-1}.L2 .srv{grid-template-columns:1fr}.hero{padding:52px 0 50px}section,.band{padding-top:64px}}
-@media (max-width:480px){.mz .lg{display:none}}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.eyebrow,.tag,.cta,h1 .w{opacity:1;transform:none}.js .rv{opacity:1;transform:none}}
-</style></head>
-<body class="L1 f-rdv">
-<nav><div class="in"><a class="brand" href="#"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--acc)"/><g transform="translate(14 14) scale(1.5)" fill="none" stroke="var(--on-acc)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g></svg><span>L’onglerie enchantée</span></a><div class="links"><a href="#services">Prestations</a><a href="#infos">Horaires</a></div><a class="btn sm" href="tel:0622988565">Appeler</a></div></nav>
-<header class="hero"><div class="deco"></div><div class="in hgrid">
-<div class="htext"><div class="eyebrow">Prothésiste ongulaire · Ambérieu-en-Bugey</div><h1><span class="w" style="--i:0">L’onglerie</span> <span class="w" style="--i:1">enchantée</span></h1><p class="tag">Des ongles soignés qui tiennent, posés avec précision.</p>
-<div class="cta"><a class="btn" href="tel:0622988565">Appeler le 06 22 98 85 65</a><a class="btn ghost" href="#infos">Horaires & adresse</a></div></div>
-<aside class="hcard rv"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--acc)"/><g transform="translate(14 14) scale(1.5)" fill="none" stroke="var(--on-acc)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g></svg><div class="hc-name">L’onglerie enchantée</div><div class="today"><span>Aujourd'hui</span><b id="todayH">—</b></div><div class="hc-town">Ambérieu-en-Bugey</div></aside>
+img,svg{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--petal) 86%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid color-mix(in srgb,var(--rose) 22%,transparent)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{font-family:var(--script);font-size:1.9rem;line-height:1;text-decoration:none;color:var(--rose-deep);white-space:nowrap;padding-top:6px}
+.links{display:flex;gap:28px;font-size:.95rem}
+.links a{text-decoration:none;color:var(--plum-soft)}
+.links a:hover{color:var(--rose-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:500 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s}
+.btn-gold{background:linear-gradient(135deg,#d8b863,var(--gold) 45%,#a8842f);color:#2a1820;box-shadow:0 10px 24px -12px #a8842f}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -14px #a8842f}
+.btn-line{border:1px solid color-mix(in srgb,var(--rose) 55%,transparent);color:var(--rose-deep)}
+.btn-line:hover{background:color-mix(in srgb,var(--rose) 10%,transparent)}
+.btn-sm{min-height:40px;padding:0 18px;font-size:.92rem}
+.btn svg{width:18px;height:18px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:56px 0 48px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{margin:0;font-family:var(--script);font-weight:400;color:var(--rose-deep);font-size:clamp(4rem,10vw,7.4rem);line-height:.95;letter-spacing:.005em}
+.hero h1 span{display:block}
+.hero h1 span:last-child{padding-left:.9em}
+.lede{font-size:clamp(1.12rem,2.1vw,1.32rem);max-width:30ch;margin:28px 0 12px;color:var(--plum)}
+.where{margin:0 0 34px;color:var(--plum-soft);font-size:1rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.stars{display:flex;align-items:center;gap:12px;margin-top:36px;font-size:.95rem;color:var(--plum-soft)}
+.stars b{font-weight:500;color:var(--plum)}
+.stars i{display:flex;gap:3px}
+.stars i svg{width:16px;height:16px;fill:var(--gold)}
+
+/* arche de la fée */
+.arch{position:relative;aspect-ratio:4/5;width:100%;max-width:440px;justify-self:center;border-radius:999px 999px 28px 28px;background:
+  radial-gradient(120% 70% at 50% 18%,#fff6ef 0%,transparent 60%),
+  linear-gradient(180deg,#f3cfcf 0%,#e6b3b8 55%,#c98b94 100%);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--gold) 70%,transparent),0 30px 60px -30px #94505c;overflow:hidden}
+.arch::before{content:"";position:absolute;inset:10px;border-radius:999px 999px 20px 20px;border:1px solid color-mix(in srgb,#fff 55%,transparent);pointer-events:none}
+.arch svg{position:absolute;inset:0;width:100%;height:100%}
+#trail{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.6s var(--ease) .5s forwards}
+.spark{opacity:0;transform-box:fill-box;transform-origin:center;animation:twinkle .7s var(--ease) forwards}
+.fairy{transform-box:fill-box;transform-origin:50% 60%;animation:hover 6s ease-in-out 3s infinite alternate}
+.wing{transform-box:fill-box;transform-origin:0% 100%;animation:flutter 2.4s ease-in-out infinite alternate}
+.wing.l{transform-origin:100% 100%}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes twinkle{0%{opacity:0;transform:scale(.2) rotate(-30deg)}70%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+@keyframes hover{to{transform:translateY(-10px)}}
+@keyframes flutter{to{transform:scale(.94,1) skewY(-2deg)}}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+h2{margin:0 0 12px;font:300 clamp(2rem,4.6vw,3rem)/1.1 var(--sans);letter-spacing:-.01em;color:var(--plum)}
+.intro{max-width:52ch;color:var(--plum-soft);margin:0 0 48px}
+
+/* prestations : une carte de menu */
+.menu{background:#fffaf7;border-radius:28px;padding:clamp(28px,5vw,56px);box-shadow:0 1px 0 #fff inset,0 24px 50px -36px #94505c;position:relative}
+.menu::after{content:"";position:absolute;inset:12px;border:1px solid color-mix(in srgb,var(--gold) 45%,transparent);border-radius:20px;pointer-events:none}
+.menu ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+.menu li{padding:22px 0;border-bottom:1px dashed color-mix(in srgb,var(--rose) 35%,transparent)}
+.menu li:nth-last-child(-n+2){border-bottom:0}
+.menu h3{margin:0 0 6px;font:400 1.3rem/1.3 var(--sans);color:var(--rose-deep);display:flex;align-items:baseline;gap:12px}
+.menu h3::after{content:"";flex:1;border-bottom:1px dotted color-mix(in srgb,var(--plum) 30%,transparent);transform:translateY(-4px)}
+.menu h3 small{order:2;font-size:.85rem;color:var(--plum-soft);font-weight:300}
+.menu p{margin:0;color:var(--plum-soft);font-size:.98rem;max-width:40ch}
+.note{margin:28px 0 0;font-size:.92rem;color:var(--plum-soft)}
+
+/* galerie : un nuancier d'ongles */
+.nails{background:var(--plum);color:#f8e6e2;border-radius:32px;padding:clamp(36px,6vw,72px) clamp(20px,5vw,64px);position:relative;overflow:hidden}
+.nails h2{color:#fbeee9}
+.nails .intro{color:#d9bfc3}
+.rack{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(12px,3vw,36px);align-items:start}
+.nail{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;font-size:.9rem;color:#e9d2d4}
+.nail i{display:block;width:min(100%,86px);aspect-ratio:7/12;border-radius:50% 50% 42% 42% / 64% 64% 36% 36%;box-shadow:inset -6px -8px 14px rgba(0,0,0,.18),inset 6px 6px 10px rgba(255,255,255,.35),0 18px 26px -16px #000;position:relative;overflow:hidden;transition:transform .5s var(--ease)}
+.nail i::after{content:"";position:absolute;left:22%;top:12%;width:16%;height:44%;border-radius:50%;background:linear-gradient(#fff9,#fff0);transform:rotate(8deg)}
+.nail:hover i{transform:translateY(-8px) rotate(-3deg)}
+.n1{background:linear-gradient(to bottom,var(--gold) 0 26%,#f3d8cf 26% 100%)}
+.n2{background:linear-gradient(140deg,#f6d5d0 0%,#c47c87 35%,#f2c6c0 55%,#9c5562 100%)}
+.n3{background:radial-gradient(circle at 20% 30%,#f4ddb0 0 1.5px,transparent 2px) 0 0/9px 9px,radial-gradient(circle at 60% 70%,#e7c46f 0 1px,transparent 1.6px) 0 0/7px 7px,linear-gradient(#5b2f42,#3a2230)}
+.n4{background:radial-gradient(60% 30% at 50% 100%,var(--gold) 0 70%,transparent 72%),#efc9c9}
+.n5{background:linear-gradient(to bottom,#fff4f1 0%,#efc0c3 55%,#b76e79 100%)}
+.n6{background:linear-gradient(#e9b8bf,#c98b94)}
+.n6 b{position:absolute;inset:0;display:grid;place-items:center}
+.n6 b svg{width:46%;fill:var(--champagne);filter:drop-shadow(0 0 4px #fff8)}
+.rack-note{margin:40px 0 0;font-size:.95rem;color:#d9bfc3}
+
+/* avis */
+.reviews .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.score{font-family:var(--script);font-size:clamp(5rem,12vw,8rem);line-height:.8;color:var(--rose-deep)}
+.score-sub{color:var(--plum-soft);margin:16px 0 0}
+blockquote{margin:0 0 36px;padding:0 0 0 28px;border-left:2px solid var(--gold);font-size:clamp(1.12rem,2vw,1.3rem);line-height:1.6}
+blockquote p{margin:0 0 10px}
+blockquote cite{font-style:normal;font-size:.92rem;color:var(--plum-soft)}
+
+/* infos */
+.infos .wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card{background:#fffaf7;border-radius:24px;padding:clamp(26px,4vw,40px);box-shadow:0 20px 40px -32px #94505c}
+.card h3{margin:0 0 18px;font:400 1.5rem/1.2 var(--sans);color:var(--rose-deep)}
+.hours{list-style:none;margin:0;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px dashed color-mix(in srgb,var(--rose) 30%,transparent);font-variant-numeric:tabular-nums}
+.hours li:last-child{border:0}
+.hours li.closed span:last-child{color:var(--plum-soft)}
+.hours li.today{color:var(--rose-deep);font-weight:500}
+.hours li.today span:first-child::after{content:" · aujourd'hui";font-weight:300;font-size:.85rem}
+.addr{font-size:1.15rem;margin:0 0 6px}
+.addr-sub{color:var(--plum-soft);margin:0 0 24px}
+.phone{display:block;font:300 clamp(1.7rem,4vw,2.2rem)/1.2 var(--sans);color:var(--rose-deep);text-decoration:none;margin:0 0 22px;font-variant-numeric:tabular-nums}
+.card .cta{gap:10px}
+
+/* rdv */
+.rdv{text-align:center;padding:110px 0 120px}
+.rdv .script{font-family:var(--script);font-size:clamp(3.2rem,8vw,5.4rem);line-height:1;color:var(--rose-deep);margin:0 0 18px}
+.rdv p{margin:0 auto 34px;max-width:40ch;color:var(--plum-soft)}
+.rdv .cta{justify-content:center}
+
+footer{border-top:1px solid color-mix(in srgb,var(--rose) 22%,transparent);padding:30px 0 100px;font-size:.9rem;color:var(--plum-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+.mz{position:fixed;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;background:var(--plum);color:#fbeee9;font:400 12px/1.3 var(--sans);padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(58,34,48,.3);width:max-content;max-width:calc(100vw - 24px);text-align:center}
+.mz a{color:#fbeee9}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .links{display:none}
+  .hero{padding:28px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;gap:20px}
+  .arch{max-width:230px;order:-1}
+  .hero h1 span:last-child{padding-left:.6em}
+  .menu ul{grid-template-columns:1fr}
+  .menu li:nth-last-child(2){border-bottom:1px dashed color-mix(in srgb,var(--rose) 35%,transparent)}
+  .rack{grid-template-columns:repeat(3,1fr);row-gap:36px}
+  .reviews .wrap,.infos .wrap{grid-template-columns:1fr;gap:32px}
+  section{padding:72px 0}
+}
+@media (max-width:420px){
+  .brand{font-size:1.6rem}
+  .nav-call{display:none}
+  .btn{width:100%}
+  .cta{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  #trail{stroke-dashoffset:0}.spark{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navigation principale"><div class="wrap">
+  <a class="brand" href="#top">L’onglerie enchantée</a>
+  <div class="links"><a href="#prestations">Prestations</a><a href="#creations">Créations</a><a href="#avis">Avis</a><a href="#infos">Horaires</a></div>
+  <a class="btn btn-gold btn-sm nav-call" href="tel:0622988565">Prendre rendez-vous</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <h1><span>L’onglerie</span><span>enchantée</span></h1>
+    <p class="lede">Extensions, nail art et soin des mains, posés avec minutie pour des ongles qui vous ressemblent.</p>
+    <p class="where">Prothésiste ongulaire à Ambérieu-en-Bugey, sur rendez-vous.</p>
+    <div class="cta">
+      <a class="btn btn-gold" href="tel:0622988565"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler le 06 22 98 85 65</a>
+      <a class="btn btn-line" href="sms:0622988565">Envoyer un SMS</a>
+    </div>
+    <div class="stars"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg></i><span><b>5,0 sur Google</b>, des clientes ravies à chaque rendez-vous</span></div>
+  </div>
+
+  <div class="arch" role="img" aria-label="Une fée aux ailes rose gold laisse derrière sa baguette une traînée de paillettes dorées">
+    <svg viewBox="0 0 400 500" aria-hidden="true">
+      <defs>
+        <linearGradient id="wingG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#fff7f2" stop-opacity=".95"/>
+          <stop offset=".55" stop-color="#f6d1cf" stop-opacity=".75"/>
+          <stop offset="1" stop-color="#d79aa3" stop-opacity=".6"/>
+        </linearGradient>
+        <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#f4ddb0"/><stop offset=".5" stop-color="#c9a44c"/><stop offset="1" stop-color="#a8842f"/>
+        </linearGradient>
+        <linearGradient id="dressG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#b76e79"/><stop offset="1" stop-color="#7d3f4c"/>
+        </linearGradient>
+        <radialGradient id="glow"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+        <symbol id="sp" viewBox="-10 -10 20 20"><path d="M0-10C1-3 3-1 10 0 3 1 1 3 0 10-1 3-3 1-10 0-3-1-1-3 0-10Z"/></symbol>
+      </defs>
+
+      <!-- lune dorée -->
+      <mask id="moonM"><rect width="400" height="500" fill="#fff"/><circle cx="320" cy="82" r="40" fill="#000"/></mask>
+      <circle cx="300" cy="96" r="44" fill="url(#goldG)" opacity=".9" mask="url(#moonM)"/>
+
+      <!-- traînée de paillettes -->
+      <path id="trail" d="M126 128 C 70 170, 58 262, 112 330 C 160 390, 250 392, 300 440 C 318 458, 326 476, 330 500" fill="none" stroke="url(#goldG)" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="900"/>
+      <g fill="#c9a44c">
+        <use href="#sp" class="spark" x="80" y="180" width="16" height="16" style="animation-delay:.9s"/>
+        <use href="#sp" class="spark" x="62" y="250" width="10" height="10" style="animation-delay:1.15s"/>
+        <use href="#sp" class="spark" x="98" y="312" width="20" height="20" style="animation-delay:1.4s"/>
+        <use href="#sp" class="spark" x="160" y="368" width="12" height="12" style="animation-delay:1.7s"/>
+        <use href="#sp" class="spark" x="232" y="392" width="18" height="18" style="animation-delay:2s"/>
+        <use href="#sp" class="spark" x="292" y="430" width="10" height="10" style="animation-delay:2.3s"/>
+      </g>
+      <g fill="#fff">
+        <use href="#sp" class="spark" x="48" y="214" width="8" height="8" style="animation-delay:1.05s"/>
+        <use href="#sp" class="spark" x="130" y="345" width="9" height="9" style="animation-delay:1.55s"/>
+        <use href="#sp" class="spark" x="262" y="414" width="8" height="8" style="animation-delay:2.15s"/>
+        <use href="#sp" class="spark" x="340" y="190" width="10" height="10" style="animation-delay:2.6s"/>
+        <use href="#sp" class="spark" x="70" y="96" width="8" height="8" style="animation-delay:2.8s"/>
+      </g>
+
+      <!-- la fée -->
+      <g class="fairy">
+        <!-- ailes arrière -->
+        <path class="wing l" d="M206 206 C 170 140, 112 112, 98 142 C 86 170, 140 202, 206 210 Z" fill="url(#wingG)" stroke="url(#goldG)" stroke-width="1.4"/>
+        <path class="wing l" d="M206 214 C 166 226, 128 262, 144 284 C 160 304, 194 262, 208 220 Z" fill="url(#wingG)" stroke="url(#goldG)" stroke-width="1.4"/>
+        <!-- ailes avant -->
+        <path class="wing" d="M214 206 C 250 126, 324 100, 342 134 C 358 168, 294 204, 214 212 Z" fill="url(#wingG)" stroke="url(#goldG)" stroke-width="1.6"/>
+        <path class="wing" d="M214 214 C 262 226, 310 262, 292 290 C 274 316, 232 268, 212 222 Z" fill="url(#wingG)" stroke="url(#goldG)" stroke-width="1.6"/>
+        <path d="M236 168 C 262 152, 300 140, 320 140 M232 238 C 254 250, 272 266, 282 280" fill="none" stroke="#c9a44c" stroke-width=".9" opacity=".7"/>
+
+        <!-- jambes -->
+        <path d="M204 318 C 200 340, 194 356, 186 372" fill="none" stroke="#e8b9ae" stroke-width="5" stroke-linecap="round"/>
+        <path d="M222 316 C 232 334, 246 344, 262 346" fill="none" stroke="#e8b9ae" stroke-width="5" stroke-linecap="round"/>
+        <path d="M182 374 l-8 4 M264 345 l9 3" stroke="#c9a44c" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- robe en pétales -->
+        <path d="M200 186 C 194 200, 196 214, 202 226 C 186 252, 172 286, 166 318 C 178 312, 186 322, 198 314 C 206 326, 218 324, 224 314 C 236 324, 250 318, 254 308 C 244 280, 232 250, 222 226 C 228 212, 228 198, 220 186 Z" fill="url(#dressG)"/>
+        <path d="M202 226 C 210 230, 216 230, 222 226" fill="none" stroke="url(#goldG)" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M184 300 C 196 290, 206 300, 214 288 C 224 298, 236 290, 246 298" fill="none" stroke="#f4ddb0" stroke-width="1" opacity=".55"/>
+
+        <!-- bras et baguette -->
+        <path d="M204 194 C 186 190, 168 174, 156 154" fill="none" stroke="#e8b9ae" stroke-width="5" stroke-linecap="round"/>
+        <path d="M218 196 C 230 210, 236 222, 238 236" fill="none" stroke="#e8b9ae" stroke-width="5" stroke-linecap="round"/>
+        <path d="M156 154 L 128 124" stroke="url(#goldG)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="124" cy="120" r="22" fill="url(#glow)"/>
+        <use href="#sp" x="112" y="108" width="24" height="24" fill="#c9a44c"/>
+
+        <!-- tête -->
+        <path d="M207 176 v12" stroke="#e8b9ae" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="208" cy="160" r="17" fill="#f0c8bc"/>
+        <path d="M191 158 C 190 140, 204 132, 216 136 C 228 140, 230 154, 226 166 C 222 154, 214 146, 200 150 C 196 152, 193 156, 191 158 Z" fill="#5b2f42"/>
+        <circle cx="222" cy="134" r="9" fill="#5b2f42"/>
+        <path d="M214 128 l4 -6 l3 6 l4 -5 l2 7" fill="none" stroke="url(#goldG)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </div>
 </div></header>
-<div class="marq" aria-hidden="true"><div>Pose gel ✦ Semi-permanent ✦ Nail art ✦ Beauté des pieds ✦ Pose gel ✦ Semi-permanent ✦ Nail art ✦ Beauté des pieds ✦ </div><div>Pose gel ✦ Semi-permanent ✦ Nail art ✦ Beauté des pieds ✦ Pose gel ✦ Semi-permanent ✦ Nail art ✦ Beauté des pieds ✦ </div></div>
-<section id="services" class="in"><h2 class="rv">Nos prestations</h2><ul class="srv"><li class="rv" style="--i:0"><span class="n">01</span><h3>Pose gel</h3></li><li class="rv" style="--i:1"><span class="n">02</span><h3>Semi-permanent</h3></li><li class="rv" style="--i:2"><span class="n">03</span><h3>Nail art</h3></li><li class="rv" style="--i:3"><span class="n">04</span><h3>Beauté des pieds</h3></li></ul></section>
-<section class="band"><div class="in"><div><b>Prendre rendez-vous</b><p>Par téléphone, on trouve ensemble le créneau qui vous va.</p></div><a class="btn big" href="tel:0622988565">Appeler le 06 22 98 85 65</a></div></section>
-<section class="in praise"><h2 class="rv">Ce que nos clients apprécient</h2><div class="chips"><span class="chip rv" style="--i:0">Qualité</span><span class="chip rv" style="--i:1">Accueil chaleureux</span><span class="chip rv" style="--i:2">Travail soigné</span></div><p class="src">D'après 2 avis Google</p></section>
-<section id="infos" class="in info">
-<div class="box rv"><h3>Horaires</h3><ul class="hours" id="hours"><li><span>Lundi</span><span>9h30 – 18h</span></li><li><span>Mardi</span><span>9h – 18h</span></li><li><span>Mercredi</span><span>9h – 18h</span></li><li><span>Jeudi</span><span>9h – 18h</span></li><li><span>Vendredi</span><span>9h – 18h</span></li><li><span>Samedi</span><span>Fermé</span></li><li><span>Dimanche</span><span>Fermé</span></li></ul></div>
-<div class="box rv" style="--i:1"><h3>Nous trouver</h3><p>2 Rue Auguste Isaac, 01500 Ambérieu-en-Bugey</p><a class="big" href="tel:0622988565">06 22 98 85 65</a><a class="btn ghost sm" href="https://www.google.com/maps/search/?api=1&query=2+Rue+Auguste+Isaac,+01500+Ambérieu-en-Bugey" target="_blank" rel="noopener">Itinéraire</a></div>
-</section>
-<footer><div class="in"><div class="brand"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="var(--acc)"/><g transform="translate(14 14) scale(1.5)" fill="none" stroke="var(--on-acc)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g></svg><span>L’onglerie enchantée</span></div><span>Prothésiste ongulaire · Ambérieu-en-Bugey</span></div></footer>
-<div class="mz">Maquette <b>Mazx web</b><span class="lg">, pas le site officiel</span> · <a href="tel:0636408522">06 36 40 85 22</a></div>
+
+<section id="prestations"><div class="wrap">
+  <h2>Les prestations</h2>
+  <p class="intro">Chaque pose commence par un temps d'échange : la forme, la longueur, la couleur. On choisit ensemble ce qui va à vos mains et à votre quotidien.</p>
+  <div class="menu">
+    <ul>
+      <li><h3>Extensions d'ongles <small>gel ou capsules</small></h3><p>Une longueur et une forme sur mesure, amande, carrée ou stiletto, pour des ongles solides et naturels.</p></li>
+      <li><h3>Nail art <small>sur mesure</small></h3><p>Dorures, paillettes, motifs peints à la main ou chromes : de la touche discrète à la vraie pièce d'art.</p></li>
+      <li><h3>Semi-permanent <small>sur ongles naturels</small></h3><p>Une couleur brillante qui tient jusqu'à trois semaines, sans abîmer vos ongles.</p></li>
+      <li><h3>Soin des mains <small>beauté et douceur</small></h3><p>Cuticules, limage, gommage et hydratation pour des mains nettes et douces, avec ou sans vernis.</p></li>
+      <li><h3>Remplissage <small>toutes les 3 à 4 semaines</small></h3><p>On entretient votre pose pour qu'elle reste impeccable, et on change de déco si l'envie vous prend.</p></li>
+      <li><h3>Dépose <small>en douceur</small></h3><p>Le retrait de vos extensions ou de votre semi-permanent, sans limer à vif l'ongle naturel.</p></li>
+    </ul>
+    <p class="note">Les tarifs sont donnés au moment de la prise de rendez-vous, selon la prestation choisie.</p>
+  </div>
+</div></section>
+
+<section id="creations" style="padding-top:0"><div class="wrap">
+  <div class="nails">
+    <h2>Le nuancier enchanté</h2>
+    <p class="intro">Quelques inspirations pour votre prochaine pose. Ici prendront place les photos de vos créations.</p>
+    <div class="rack">
+      <div class="nail"><i class="n1"></i>French dorée</div>
+      <div class="nail"><i class="n2"></i>Chrome rose gold</div>
+      <div class="nail"><i class="n3"></i>Pluie de paillettes</div>
+      <div class="nail"><i class="n4"></i>Demi-lune d'or</div>
+      <div class="nail"><i class="n5"></i>Ombré poudré</div>
+      <div class="nail"><i class="n6"><b><svg viewBox="-10 -10 20 20" aria-hidden="true"><path d="M0-10C1-3 3-1 10 0 3 1 1 3 0 10-1 3-3 1-10 0-3-1-1-3 0-10Z"/></svg></b></i>Poussière de fée</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="reviews" id="avis"><div class="wrap">
+  <div>
+    <div class="score" aria-label="Note de 5 sur 5">5,0</div>
+    <p class="score-sub">Note moyenne sur Google, sur 5.</p>
+  </div>
+  <div>
+    <blockquote><p>« L'accueil est chaleureux, le travail minutieux et le résultat toujours impeccable. Les produits sont de qualité et les conseils adaptés à chacune. »</p><cite>Une cliente, avis Google</cite></blockquote>
+    <blockquote><p>« Après plusieurs rendez-vous, ravie à chaque fois. Je viens régulièrement et je recommande à 100 %. »</p><cite>Une cliente, avis Google</cite></blockquote>
+  </div>
+</div></section>
+
+<section class="infos" id="infos" style="padding-top:0"><div class="wrap">
+  <div class="card">
+    <h3>Horaires</h3>
+    <ul class="hours" id="hours">
+      <li data-d="1"><span>Lundi</span><span>9 h 30 – 18 h</span></li>
+      <li data-d="2"><span>Mardi</span><span>9 h – 18 h</span></li>
+      <li data-d="3"><span>Mercredi</span><span>9 h – 18 h</span></li>
+      <li data-d="4"><span>Jeudi</span><span>9 h – 18 h</span></li>
+      <li data-d="5"><span>Vendredi</span><span>9 h – 18 h</span></li>
+      <li data-d="6" class="closed"><span>Samedi</span><span>Fermé</span></li>
+      <li data-d="0" class="closed"><span>Dimanche</span><span>Fermé</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Venir au salon</h3>
+    <p class="addr">2 rue Auguste Isaac<br>01500 Ambérieu-en-Bugey</p>
+    <p class="addr-sub">Uniquement sur rendez-vous.</p>
+    <a class="phone" href="tel:0622988565">06 22 98 85 65</a>
+    <div class="cta">
+      <a class="btn btn-gold btn-sm" href="tel:0622988565">Appeler</a>
+      <a class="btn btn-line btn-sm" href="https://www.google.com/maps/search/?api=1&query=L%27onglerie%20enchant%C3%A9e%202%20Rue%20Auguste%20Isaac%2001500%20Amb%C3%A9rieu-en-Bugey" target="_blank" rel="noopener">Voir l'itinéraire</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="rdv"><div class="wrap">
+  <p class="script">À très vite</p>
+  <p>Un appel ou un SMS suffit pour réserver votre moment. Dites-nous l'envie du jour, on s'occupe du reste.</p>
+  <div class="cta">
+    <a class="btn btn-gold" href="tel:0622988565">Appeler le 06 22 98 85 65</a>
+    <a class="btn btn-line" href="sms:0622988565">Envoyer un SMS</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© L'onglerie enchantée, Ambérieu-en-Bugey</span><span>2 rue Auguste Isaac · 06 22 98 85 65</span></div></footer>
+
+<div class="mz">Maquette <b>Mazx web</b>, pas le site officiel · <a href="tel:0636408522">06 36 40 85 22</a></div>
+
 <script>
-document.documentElement.classList.add('js');
-var io='IntersectionObserver' in window?new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in-v');io.unobserve(x.target)}})},{threshold:.1}):null;
-document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in-v')});
-setTimeout(function(){document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in-v')})},3500);
-var d=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'][new Date().getDay()];
-document.querySelectorAll('#hours li').forEach(function(li){if(li.firstChild.textContent===d){li.classList.add('today');var t=document.getElementById('todayH');if(t)t.textContent=li.lastChild.textContent}});
-</script></body></html>
+(function(){
+  var d=new Date().getDay();
+  var li=document.querySelector('#hours li[data-d="'+d+'"]');
+  if(li)li.classList.add('today');
+})();
+</script>
+</body>
+</html>
