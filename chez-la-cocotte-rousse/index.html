@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Chez la Cocotte Rousse · Chambre d&#x27;hôtes à Parves et Nattages</title><meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3efe6;--sf:#fbf8f2;--ink:#26302a;--acc:#4f6b4a;--soft:#d9cfb8;--d:'Young Serif',Georgia,serif;--b:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--b);-webkit-font-smoothing:antialiased}
+a{color:inherit}.w{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{font-family:var(--d);font-size:1.25rem;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--acc);color:#fff;text-decoration:none;font-weight:600;white-space:nowrap}
+.btn.l{background:transparent;color:var(--ink);border:1.5px solid color-mix(in srgb,var(--ink) 30%,transparent)}
+.btn.s{min-height:40px;padding:0 18px;font-size:.92rem}
+/* hero : un paysage dessiné, le nom posé dessus */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--soft),var(--bg))}
+.hero svg{position:absolute;inset:auto 0 0 0;width:100%;height:58%}
+.hero .w{position:relative;padding-top:72px;padding-bottom:220px}
+.kind{margin:0 0 10px;font-weight:600;color:var(--acc)}
+h1{font-family:var(--d);font-weight:400;font-size:clamp(2.6rem,8vw,5.4rem);line-height:1.02;margin:0 0 18px;max-width:14ch;text-wrap:balance}
+.lead{font-size:clamp(1.08rem,2.2vw,1.25rem);max-width:38ch;margin:0 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+section{padding:84px 0}
+h2{font-family:var(--d);font-weight:400;font-size:clamp(1.8rem,4.4vw,2.6rem);line-height:1.15;margin:0 0 14px}
+.intro{max-width:56ch;margin:0 0 36px;color:color-mix(in srgb,var(--ink) 78%,transparent)}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.ph{aspect-ratio:4/3;border-radius:18px;background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--soft) 70%,var(--sf)) 0 14px,var(--sf) 14px 28px);display:grid;place-items:center;color:color-mix(in srgb,var(--ink) 60%,transparent);font-size:.95rem;text-align:center;padding:20px;border:1px solid color-mix(in srgb,var(--ink) 10%,transparent)}
+.gal{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:clamp(260px,40vw,420px)}
+.gal .ph{aspect-ratio:auto}.gal .ph:first-child{grid-row:span 2}
+ul.eq{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+ul.eq li{padding:12px 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 12%,transparent)}
+.env{background:var(--sf)}
+.env ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.env li{padding:22px;border-radius:16px;background:var(--bg);font-family:var(--d);font-size:1.2rem;line-height:1.3}
+.book{background:var(--ink);color:var(--bg);border-radius:28px;padding:clamp(32px,6vw,64px)}
+.book h2{color:var(--bg)}.book p{max-width:48ch;opacity:.85}
+.book .btn{background:var(--soft);color:var(--ink)}.book .btn.l{background:transparent;color:var(--bg);border-color:color-mix(in srgb,var(--bg) 40%,transparent)}
+.cal{margin-top:28px;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;max-width:420px}
+.cal span{aspect-ratio:1;border-radius:8px;background:color-mix(in srgb,var(--bg) 14%,transparent);display:grid;place-items:center;font-size:.8rem}
+.cal span.x{background:color-mix(in srgb,var(--bg) 4%,transparent);opacity:.5;text-decoration:line-through}
+.cal-note{font-size:.85rem;opacity:.7;margin-top:10px}
+footer{padding:30px 0 100px;font-size:.9rem;opacity:.75}
+.mz{position:fixed;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:30;background:#1b1b1b;color:#fff;font:500 12px/1.3 system-ui,sans-serif;padding:8px 14px;border-radius:999px;width:max-content;max-width:calc(100vw - 24px);text-align:center}.mz a{color:#fff}
+@media (max-width:820px){.split{grid-template-columns:1fr}.env ol{grid-template-columns:1fr}ul.eq{grid-template-columns:1fr}.hero .w{padding-bottom:170px;padding-top:48px}section{padding:64px 0}nav .btn{display:none}}
+@media (max-width:420px){.cta .btn{width:100%}}
+</style></head><body>
+<nav><div class="w"><a class="logo" href="#">Chez la Cocotte Rousse</a><a class="btn s" href="#reserver">Réserver</a></div></nav>
+<header class="hero">
+<svg viewBox="0 0 1200 300" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 170 L140 90 L260 150 L400 60 L560 160 L700 80 L860 150 L1000 70 L1200 150 L1200 300 L0 300Z" style="fill:color-mix(in srgb,#4f6b4a 30%,#f3efe6)"/>
+<path d="M0 220 C200 170 360 200 520 180 C700 160 860 210 1020 185 C1100 172 1160 178 1200 182 L1200 300 L0 300Z" style="fill:color-mix(in srgb,#4f6b4a 55%,#f3efe6)"/>
+<path d="M0 262 C260 240 520 262 760 248 C960 236 1100 250 1200 246 L1200 300 L0 300Z" fill="#4f6b4a"/>
+</svg>
+<div class="w"><p class="kind">Chambre d&#x27;hôtes à Parves et Nattages, dans le Bugey</p><h1>Chez la Cocotte Rousse</h1>
+<p class="lead">Un séjour au calme, entre montagnes et lacs du Bugey. Réservez directement auprès de nous, sans frais de plateforme.</p>
+<div class="cta"><a class="btn" href="#reserver">Voir les disponibilités</a><a class="btn l" href="tel:0680855309">Appeler le 06 80 85 53 09</a></div></div>
+</header>
+<section><div class="w split">
+<div><h2>Le chambre d&#x27;hôtes</h2><p class="intro">Ici, la description de votre chambre d&#x27;hôtes : le nombre de couchages, l'ambiance des lieux, ce qui fait que vos voyageurs reviennent. Nous l'écrirons ensemble à partir de vos mots.</p>
+<ul class="eq"><li>Couchages : à préciser</li><li>Cuisine équipée</li><li>Linge de maison</li><li>Extérieur et stationnement</li><li>Animaux : à préciser</li><li>Arrivée et départ : à préciser</li></ul></div>
+<div class="gal"><div class="ph">Votre plus belle photo ici</div><div class="ph">Intérieur</div><div class="ph">Extérieur</div></div>
+</div></section>
+<section class="env"><div class="w"><h2>Autour de Parves et Nattages</h2><p class="intro">De quoi remplir les journées de vos voyageurs, à pied, à vélo ou en voiture.</p><ol><li>Le Rhône et la ViaRhôna</li><li>Belley tout proche</li><li>Le lac du Bourget</li></ol></div></section>
+<section id="reserver"><div class="w"><div class="book">
+<h2>Réserver en direct</h2><p>Écrivez-nous ou appelez-nous pour connaître les disponibilités. Réserver en direct, c'est le meilleur prix pour vous et un échange avec nous avant votre arrivée.</p>
+<div class="cta"><a class="btn" href="mailto:lecomte.cat@hotmail.fr">Écrire un mail</a><a class="btn l" href="tel:0680855309">06 80 85 53 09</a></div>
+<div class="cal" aria-label="Exemple de calendrier des disponibilités"><span class="">1</span><span class="">2</span><span class="">3</span><span class="">4</span><span class="x">5</span><span class="x">6</span><span class="">7</span><span class="">8</span><span class="">9</span><span class="">10</span><span class="">11</span><span class="x">12</span><span class="x">13</span><span class="">14</span><span class="">15</span><span class="">16</span><span class="">17</span><span class="">18</span><span class="x">19</span><span class="x">20</span><span class="">21</span><span class="">22</span><span class="">23</span><span class="">24</span><span class="">25</span><span class="">26</span><span class="">27</span><span class="">28</span></div>
+<p class="cal-note">Exemple : ici s'affichera votre calendrier de disponibilités, mis à jour par vos soins.</p>
+</div></div></section>
+<footer><div class="w">© Chez la Cocotte Rousse · Parves et Nattages</div></footer>
+<div class="mz">Maquette <b>Mazx web</b>, pas le site officiel · <a href="tel:0636408522">06 36 40 85 22</a></div>
+</body></html>
