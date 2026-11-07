@@ -23,6 +23,8 @@
   --ink:#2b1b20;
   --ink-soft:#6f5359;
   --gold:#caa25a;
+  --gold-deep:#8d6a2c;
+  --gold-foil:linear-gradient(115deg,#fff1c9,#caa25a 35%,#f3dc9f 55%,#a07a35 80%,#e9cf93);
   --serif:"Bodoni Moda",Didot,"Times New Roman",serif;
   --script:"Great Vibes",cursive;
   --sans:"Jost",system-ui,sans-serif;
@@ -53,50 +55,54 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font:500 1rem/1 var(--sans);text-decoration:none;white-space:nowrap;cursor:pointer;border:0;transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s}
 .btn-rg{background:linear-gradient(120deg,#a9645a,#d9a08e 45%,#b8776b 70%,#a35f55);color:#fff;box-shadow:0 12px 26px -14px #93564c}
 .btn-rg:hover{transform:translateY(-2px);box-shadow:0 18px 30px -16px #93564c}
+.btn-rg{position:relative;overflow:hidden}
+.btn-rg::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#ffffff70 50%,transparent 65%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn-rg:hover::after{transform:translateX(120%)}
 .btn-line{background:#fff8;border:1px solid color-mix(in srgb,var(--rg) 55%,transparent);color:var(--rg-deep)}
 .btn-line:hover{background:#fff}
 .btn-sm{min-height:40px;padding:0 18px;font-size:.92rem}
 .btn svg{width:18px;height:18px;flex:none}
 
-/* ---------- hero ---------- */
-.hero{position:relative;padding:54px 0 70px;overflow:hidden}
+/* ---------- hero : son logo en médaillon doré ---------- */
+.hero{position:relative;padding:64px 0 92px;overflow:hidden;background:radial-gradient(42% 60% at 74% 48%,#f5d6d1 0,transparent 72%),radial-gradient(30% 40% at 8% 90%,#f8e4e0 0,transparent 70%)}
 #dust{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"t a" "r a";column-gap:56px;align-items:end}
-.h-title{grid-area:t}.h-rest{grid-area:r;align-self:start}.arch{grid-area:a;align-self:center}
-.by{font:400 1.7rem/1 var(--script);color:var(--rg-deep);margin:0 0 6px}
-h1{margin:0;line-height:1}
-h1 .caps{display:block;font:400 clamp(2.2rem,5.6vw,4.2rem)/1 var(--serif);letter-spacing:.07em;text-transform:uppercase;color:var(--ink)}
-h1 .script{display:block;font:400 clamp(4.4rem,11vw,8.2rem)/.9 var(--script);color:var(--framboise);margin:.04em 0 0 .3em}
-.heart-line{display:flex;align-items:center;gap:14px;margin:26px 0 22px;color:var(--rg)}
-.heart-line::before,.heart-line::after{content:"";height:1px;width:56px;background:currentColor;opacity:.6}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:center}
+.kicker{margin:0 0 22px;font:500 .8rem/1.4 var(--serif);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+.by{margin:0 0 8px;font:400 clamp(2rem,3.4vw,2.6rem)/1.1 var(--script)}
+h1{margin:0;font:400 clamp(2.5rem,4.8vw,3.9rem)/1.08 var(--serif);letter-spacing:-.01em;max-width:13ch;color:var(--ink)}
+.heart-line{display:flex;align-items:center;gap:14px;margin:26px 0 22px;color:var(--gold)}
+.heart-line::before,.heart-line::after{content:"";height:1px;width:64px;background:linear-gradient(90deg,transparent,var(--gold))}
+.heart-line::after{background:linear-gradient(90deg,var(--gold),transparent)}
 .heart-line svg{width:18px;height:18px}
-.lede{font:400 clamp(1.15rem,2.3vw,1.4rem)/1.45 var(--serif);font-style:italic;margin:0 0 10px;max-width:28ch}
-.where{margin:0 0 30px;color:var(--ink-soft)}
+.where{margin:0 0 32px;color:var(--ink-soft);max-width:42ch}
 .cta{display:flex;flex-wrap:wrap;gap:12px}
 .score{display:flex;align-items:center;gap:12px;margin-top:32px;color:var(--ink-soft);font-size:.95rem}
 .score i{display:flex;gap:3px}.score i svg{width:16px;height:16px;fill:var(--gold)}
 .score b{color:var(--ink);font-weight:500}
 
-/* photo dans une arche dorée, comme le cercle de son logo */
-.arch{position:relative;justify-self:center;width:min(100%,430px);aspect-ratio:3/4}
-.arch .ph{position:absolute;inset:0;border-radius:999px 999px 26px 26px;overflow:hidden;box-shadow:0 34px 60px -34px #93564c}
-.arch .ph img{width:100%;height:100%;object-fit:cover}
-.arch::before{content:"";position:absolute;inset:-14px;border-radius:999px 999px 34px 34px;border:1.5px solid var(--gold);opacity:.75}
-.arch::after{content:"";position:absolute;inset:-26px;border-radius:999px 999px 42px 42px;border:1px solid var(--rg-light);opacity:.6}
-.seal{position:absolute;left:-34px;bottom:46px;width:118px;height:118px;border-radius:50%;background:#fff;box-shadow:0 18px 36px -20px #93564c;padding:5px;z-index:2}
-.seal img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.medal{position:relative;justify-self:center;width:min(100%,440px);aspect-ratio:1}
+.medal img{position:relative;z-index:1;width:100%;height:100%;border-radius:50%;object-fit:cover;box-shadow:0 0 0 7px #fffaf7,0 44px 80px -44px #93564c}
+.medal::before,.medal::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.medal::before{inset:-18px;padding:1.6px;background:conic-gradient(from 210deg,#fff1c9,#caa25a,#8d6a2c,#f3dc9f,#caa25a,#a07a35,#fff1c9);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.medal::after{inset:-34px;border:1px solid color-mix(in srgb,var(--rg-light) 70%,transparent)}
+.medal.glow img{animation:glow 1.6s var(--ease)}
+@keyframes glow{40%{box-shadow:0 0 0 7px #fffaf7,0 0 70px 10px #ffe7b3,0 44px 80px -44px #93564c}}
+.tw{position:absolute;z-index:2;fill:url(#gFoil);width:22px;height:22px;animation:tw 3.6s ease-in-out infinite}
+.tw.t1{top:4%;left:2%}.tw.t2{top:18%;right:-6%;width:14px;height:14px;animation-delay:-1.2s}.tw.t3{bottom:6%;left:-4%;width:16px;height:16px;animation-delay:-2.4s}
+@keyframes tw{0%,100%{transform:scale(.7) rotate(0);opacity:.6}50%{transform:scale(1.1) rotate(20deg);opacity:1}}
 
 /* ---------- bandeau engagements ---------- */
 .promise{border-block:1px solid color-mix(in srgb,var(--rg) 25%,transparent);background:#fff6}
 .promise .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
 .promise div{display:flex;align-items:center;gap:14px;justify-content:center;font-size:.98rem}
-.promise svg{width:38px;height:38px;flex:none;stroke:var(--rg);fill:none;stroke-width:1.3}
+.promise svg{width:38px;height:38px;flex:none;stroke:var(--gold);fill:none;stroke-width:1.3}
 
 /* ---------- sections ---------- */
 section{padding:96px 0}
 .head{text-align:center;margin:0 auto 52px;max-width:640px}
 .head .s{display:block;font:400 clamp(3rem,7vw,4.6rem)/1 var(--script);color:var(--framboise)}
 .head h2{margin:0;font:400 clamp(1.15rem,2.4vw,1.4rem)/1.3 var(--serif);letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.head h2::after{content:"";display:block;width:160px;height:16px;margin:18px auto 0;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20160%2016%27%3E%3Cpath%20d%3D%27M0%208h62M98%208h62%27%20stroke%3D%27%23caa25a%27%20stroke-width%3D%271%27/%3E%3Cpath%20d%3D%27M80%2013s-6-3.6-6-7.4a3.2%203.2%200%200%201%206-1.6%203.2%203.2%200%200%201%206%201.6c0%203.8-6%207.4-6%207.4Z%27%20fill%3D%27none%27%20stroke%3D%27%23caa25a%27%20stroke-width%3D%271.1%27/%3E%3Ccircle%20cx%3D%2766%27%20cy%3D%278%27%20r%3D%271.3%27%20fill%3D%27%23caa25a%27/%3E%3Ccircle%20cx%3D%2794%27%20cy%3D%278%27%20r%3D%271.3%27%20fill%3D%27%23caa25a%27/%3E%3C/svg%3E") center/contain no-repeat}
 .head p{margin:16px auto 0;color:var(--ink-soft);max-width:48ch}
 
 /* la carte des prestations, comme son affiche */
@@ -217,6 +223,27 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 .mz{position:fixed;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:40;background:var(--ink);color:#fbeee9;font:400 12px/1.3 var(--sans);padding:8px 14px;border-radius:999px;box-shadow:0 8px 24px rgba(43,27,32,.3);width:max-content;max-width:calc(100vw - 24px);text-align:center}
 .mz a{color:#fbeee9}
 
+/* ---------- la fée d'Amélie ---------- */
+#trail{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:44}
+.fee{position:fixed;left:0;top:0;z-index:45;width:124px;aspect-ratio:160/175;padding:0;border:0;background:none;cursor:pointer;transform:translate3d(var(--fx,-300px),var(--fy,-300px),0);will-change:transform;-webkit-tap-highlight-color:transparent;border-radius:50%}
+.fee .bob{display:block;width:100%;height:100%;animation:bob 3.4s ease-in-out infinite}
+.fee.flying .bob{animation:none}
+.fee svg{display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 10px 14px rgba(147,86,76,.32)) drop-shadow(0 0 12px rgba(255,236,200,.75));transition:transform .25s}
+.fee.flip svg{transform:scaleX(-1)}
+.fee .wn,.fee .wf{transform-box:view-box;transform-origin:117px 72px;animation:flap .3s ease-in-out infinite alternate}
+.fee .wf{animation-delay:-.15s}
+.fee:not(.flying) .wn,.fee:not(.flying) .wf{animation-duration:.7s}
+@keyframes flap{to{transform:rotate(-10deg) scale(.86,1)}}
+@keyframes bob{50%{transform:translateY(-9px) rotate(-3deg)}}
+.bulle,.fee-menu{position:fixed;z-index:46;right:146px;bottom:132px;width:max-content;max-width:min(260px,calc(100vw - 120px));background:#fffdfc;border-radius:20px 20px 4px 20px;padding:14px 18px 15px;box-shadow:0 22px 44px -22px #93564c,0 0 0 1px color-mix(in srgb,var(--gold) 45%,transparent);opacity:0;transform:translateY(8px) scale(.96);transform-origin:100% 100%;transition:opacity .35s var(--ease),transform .35s var(--ease);pointer-events:none}
+.bulle.on,.fee-menu.on{opacity:1;transform:none;pointer-events:auto}
+.bulle b,.fee-menu b{display:block;font:400 1.35rem/1 var(--script);color:var(--framboise);margin-bottom:4px}
+.bulle p{margin:0;font-size:.95rem;line-height:1.45}
+.fee-menu{padding-bottom:10px}
+.fee-menu a{display:flex;align-items:center;gap:10px;padding:9px 2px;border-top:1px solid color-mix(in srgb,var(--rg) 18%,transparent);text-decoration:none;font-size:.97rem}
+.fee-menu a:hover{color:var(--framboise)}
+.fee-menu a::before{content:"";width:7px;height:7px;transform:rotate(45deg);background:var(--gold-foil);flex:none}
+
 /* apparition unique du hero */
 .hero .reveal{opacity:0;transform:translateY(14px);animation:up .9s var(--ease) forwards}
 .hero .r2{animation-delay:.15s}.hero .r3{animation-delay:.3s}.hero .r4{animation-delay:.45s}.hero .r5{animation-delay:.6s}
@@ -224,11 +251,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 @media (max-width:900px){
   .links{display:none}
-  .hero{padding:26px 0 56px}
-  .hero .wrap{grid-template-columns:1fr;grid-template-areas:"t" "a" "r";row-gap:30px}
-  .arch{width:min(64%,250px);margin:18px 0 8px}
-  .heart-line{margin-top:10px}
-  .seal{width:76px;height:76px;left:-26px;bottom:20px}
+  .hero{padding:44px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;row-gap:48px;text-align:center}
+  .medal{order:-1;width:min(76vw,320px)}
+  .h-text h1{margin-inline:auto}.where{margin-inline:auto}
+  .heart-line,.cta,.score{justify-content:center}
+  .kicker{letter-spacing:.2em;font-size:.72rem}
+  .fee{width:76px}
+  .bulle,.fee-menu{right:84px;bottom:104px}
   .promise .wrap{grid-template-columns:1fr;gap:12px}.promise div{justify-content:flex-start}
   .menu,.ba,.quotes,.infos .wrap{grid-template-columns:1fr}
   .ba{gap:36px}
@@ -261,24 +291,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <header class="hero" id="top">
   <canvas id="dust" aria-hidden="true"></canvas>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gFoil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1c9"/><stop offset=".5" stop-color="#caa25a"/><stop offset="1" stop-color="#8d6a2c"/></linearGradient></defs></svg>
   <div class="wrap">
-    <div class="h-title">
-      <p class="by reveal">par Amélie</p>
-      <h1 class="reveal r2"><span class="caps">L’Onglerie</span><span class="script">Enchantée</span></h1>
-    </div>
-    <div class="h-rest">
+    <div class="h-text">
+      <p class="kicker reveal">Prothésiste ongulaire à Ambérieu-en-Bugey</p>
+      <p class="by reveal r2"><span class="rg-text">Bienvenue chez Amélie</span></p>
+      <h1 class="reveal r2">Des ongles qui révèlent votre beauté.</h1>
       <div class="heart-line reveal r3" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div>
-      <p class="lede reveal r3">Des ongles qui révèlent votre beauté.</p>
-      <p class="where reveal r4">Prothésiste ongulaire à Ambérieu-en-Bugey, sur rendez-vous.</p>
+      <p class="where reveal r3">Semi-permanent, gel, pose américaine, Popit, nail art et pédicure. Uniquement sur rendez-vous.</p>
       <div class="cta reveal r4">
         <a class="btn btn-rg" href="tel:0622988565"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler Amélie</a>
         <a class="btn btn-line" href="#prestations">Voir les prestations</a>
       </div>
       <div class="score reveal r5"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg></i><span><b>5,0 sur Google</b>, des clientes ravies à chaque rendez-vous</span></div>
     </div>
-    <div class="arch reveal r2">
-      <div class="ph"><img src="img/rose-gold.webp" alt="Pose rose gold chromée et blanche, réalisée par Amélie" width="542" height="723"></div>
-      <div class="seal"><img src="img/logo.webp" alt="Logo de L’Onglerie Enchantée" width="626" height="626"></div>
+    <div class="medal reveal r2" id="medal">
+      <img src="img/logo.webp" alt="Logo de L’Onglerie Enchantée : révèle la beauté de tes mains" width="626" height="626">
+      <svg class="tw t1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.6 7 17 11.4 24 12 17 12.6 12.6 17 12 24 11.4 17 7 12.6 0 12 7 11.4 11.4 7 12 0Z"/></svg><svg class="tw t2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.6 7 17 11.4 24 12 17 12.6 12.6 17 12 24 11.4 17 7 12.6 0 12 7 11.4 11.4 7 12 0Z"/></svg><svg class="tw t3" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.6 7 17 11.4 24 12 17 12.6 12.6 17 12 24 11.4 17 7 12.6 0 12 7 11.4 11.4 7 12 0Z"/></svg>
     </div>
   </div>
 </header>
@@ -289,7 +318,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   <div><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M13 9h14l5 7-12 15L8 16Z"/><path d="M8 16h24M17 9l-2 7 5 15 5-15-2-7"/></svg>Passion & savoir-faire</div>
 </div></div>
 
-<section id="prestations"><div class="wrap">
+<section id="prestations" data-fee="prestations"><div class="wrap">
   <div class="head"><span class="s">Prestations</span><h2>Prothésie ongulaire</h2><p>L’élégance jusqu’au bout des ongles. Chaque pose est unique, tout comme vous !</p></div>
   <div class="menu">
     <div>
@@ -326,7 +355,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   <p class="menu-note">Prenez soin de vos ongles, ils méritent ce qu’il y a de mieux.</p>
 </div></section>
 
-<section id="avant-apres" style="padding-top:0"><div class="wrap ba">
+<section id="avant-apres" data-fee="avant-apres" style="padding-top:0"><div class="wrap ba">
   <div class="cmp" id="cmp">
     <img src="img/avant.webp" alt="Ongles avant la pose" width="180" height="272">
     <img class="after" src="img/apres.webp" alt="Les mêmes ongles après une pose pailletée framboise" width="180" height="272">
@@ -343,7 +372,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </div></section>
 
-<section id="nuancier" class="nuancier"><div class="wrap">
+<section id="nuancier" data-fee="nuancier" class="nuancier"><div class="wrap">
   <div class="head"><span class="s">Le nuancier</span><h2>Essayez votre future pose</h2><p>Touchez une finition pour la voir sur les ongles.</p></div>
   <div class="try">
     <div class="stage" aria-hidden="true">
@@ -366,7 +395,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </div></section>
 
-<section id="creations" style="padding-top:0"><div class="wrap">
+<section id="creations" data-fee="creations" style="padding-top:0"><div class="wrap">
   <div class="head"><span class="s">Mes créations</span><h2>La pose du moment</h2><p>Élégante, simple, et tellement vous.</p></div>
   <div class="gal">
     <figure class="tall"><img src="img/rose-gold.webp" alt="Chrome rose gold et ongles blancs décorés" loading="lazy" width="542" height="723"><figcaption>Chrome rose gold</figcaption></figure>
@@ -377,7 +406,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   <p class="gal-note">Retrouvez toutes mes poses sur ma page Facebook.</p>
 </div></section>
 
-<section class="reviews" id="avis"><div class="wrap">
+<section class="reviews" id="avis" data-fee="avis"><div class="wrap">
   <div class="head"><span class="s">Vos mots</span><h2>5,0 sur Google</h2></div>
   <div class="stars-big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.9 7.5.7-5.7 5 1.7 7.4L12 18.3 5.5 22l1.7-7.4L1.5 9.6 9 8.9z"/></svg></div>
   <div class="quotes">
@@ -386,7 +415,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   </div>
 </div></section>
 
-<section class="infos" id="infos"><div class="wrap">
+<section class="infos" id="infos" data-fee="infos"><div class="wrap">
   <div class="card">
     <h3><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>Horaires</h3>
     <ul class="hours" id="hours">
@@ -424,6 +453,51 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
 <footer><div class="wrap"><span>© L’Onglerie Enchantée par Amélie, Ambérieu-en-Bugey</span><span>2 rue Auguste Isaac · 06 22 98 85 65</span></div></footer>
 
+<canvas id="trail" aria-hidden="true"></canvas>
+<button class="fee" id="fee" type="button" aria-label="La fée d’Amélie : je vous emmène où ?" aria-expanded="false" aria-controls="feeMenu"><span class="bob"><svg viewBox="40 0 160 175" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="fRg" gradientUnits="userSpaceOnUse" x1="70" y1="40" x2="150" y2="150"><stop offset="0" stop-color="#fae3d8"/><stop offset=".22" stop-color="#b97a6c"/><stop offset=".42" stop-color="#f7d4c4"/><stop offset=".58" stop-color="#c18072"/><stop offset=".78" stop-color="#f2c6b3"/><stop offset="1" stop-color="#8a4c43"/></linearGradient>
+<linearGradient id="fAu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1c9"/><stop offset=".5" stop-color="#caa25a"/><stop offset="1" stop-color="#8d6a2c"/></linearGradient>
+<radialGradient id="fWg" cx=".85" cy=".9" r="1.1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".45" stop-color="#fbe3ea" stop-opacity=".6"/><stop offset="1" stop-color="#e7b9a8" stop-opacity=".3"/></radialGradient>
+<filter id="fEdge" x="-10%" y="-10%" width="120%" height="120%"><feMorphology in="SourceAlpha" operator="dilate" radius=".7" result="d"/><feFlood flood-color="#c9a25a"/><feComposite in2="d" operator="in" result="o"/><feMerge><feMergeNode in="o"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g class="wf" opacity=".6">
+<path d="M117 72 C 108 44, 104 18, 118 8 C 132 2, 134 40, 117 72Z" fill="url(#fWg)" stroke="url(#fAu)" stroke-width=".7"/>
+<path d="M115 76 C 100 80, 84 92, 88 100 C 94 106, 108 90, 115 76Z" fill="url(#fWg)" stroke="url(#fAu)" stroke-width=".7"/>
+</g>
+<g class="wn">
+<path d="M117 72 C 96 56, 64 30, 70 14 C 76 0, 104 6, 112 30 C 116 44, 118 58, 117 72Z" fill="url(#fWg)" stroke="url(#fAu)" stroke-width="1"/>
+<path d="M117 70 C 104 50, 88 30, 80 16 M115 60 C 104 52, 92 44, 84 40 M114 48 C 110 36, 106 24, 100 14" fill="none" stroke="url(#fAu)" stroke-width=".5" opacity=".8"/>
+<path d="M115 76 C 96 72, 66 76, 64 90 C 62 104, 92 98, 115 76Z" fill="url(#fWg)" stroke="url(#fAu)" stroke-width="1"/>
+<path d="M114 77 C 98 82, 82 88, 70 92" fill="none" stroke="url(#fAu)" stroke-width=".5" opacity=".8"/>
+<circle cx="84" cy="22" r="1.2" fill="#caa25a"/><circle cx="74" cy="88" r="1" fill="#caa25a"/>
+</g>
+<g fill="url(#fRg)" filter="url(#fEdge)">
+<path d="M125 44 C 114 40 104 44 98 52 C 94 58 88 60 82 57 C 90 66 102 62 108 55 C 114 50 120 50 127 51Z"/>
+<circle cx="124" cy="41" r="6"/>
+<path d="M132 41 C 138 41 142 46 142 51 L 144 53 L 141.5 54 C 141 59 136 62 131 61 C 126 60 122 56 123 50 C 123 45 127 41 132 41Z"/>
+<path d="M127 58 C 129 61 131 62 133 64 C 137 67 136 72 133 77 C 130 82 126 87 122 90 L 114 88 C 118 82 120 76 121 70 C 121 66 123 62 125 58Z"/>
+<path d="M131 66 C 140 62 150 56 160 48 C 162 47 164 48 163 50 C 154 58 144 66 133 72Z"/>
+<path d="M124 68 C 118 76 110 82 102 86 C 100 87 99 85 101 84 C 108 80 114 74 120 66Z"/>
+<path d="M114 87 C 104 92 94 98 82 103 C 91 105 92 110 87 119 C 96 115 100 119 101 127 C 105 119 110 117 117 119 C 116 111 120 104 127 100 C 126 94 124 90 122 89Z"/>
+<path d="M100 116 C 92 130 80 142 66 154 C 62 158 58 160 55 160 C 59 156 62 152 65 148 C 77 136 87 124 95 112Z"/>
+<path d="M108 119 C 106 128 102 135 98 140 C 92 144 84 146 76 145 C 72 145 69 143 69 142 C 77 141 86 139 93 134 C 97 129 100 122 104 116Z"/>
+</g>
+<path d="M114 88.5 L 122.5 90" stroke="#caa25a" stroke-width="2" stroke-linecap="round"/>
+<g fill="#fff4d6"><circle cx="96" cy="108" r=".9"/><circle cx="106" cy="112" r=".7"/><circle cx="112" cy="100" r=".8"/><circle cx="100" cy="118" r=".6"/></g>
+<path d="M162 49 L 178 32" stroke="url(#fAu)" stroke-width="1.8" stroke-linecap="round"/>
+<path d="M180 22 l2.3 5.4 5.8 .5 -4.4 3.8 1.3 5.7 -5-3 -5 3 1.3-5.7 -4.4-3.8 5.8-.5z" fill="url(#fAu)"/>
+</svg>
+</span></button>
+<div class="bulle" id="bulle" role="status" aria-live="polite"><b>La fée d’Amélie</b><p id="bulleTxt"></p></div>
+<div class="fee-menu" id="feeMenu" role="navigation" aria-label="Raccourcis de la fée"><b>Je vous emmène où ?</b>
+  <a href="tel:0622988565">Appeler Amélie</a>
+  <a href="sms:0622988565">Envoyer un SMS</a>
+  <a href="#prestations">Voir les prix</a>
+  <a href="#nuancier">Essayer une couleur</a>
+  <a href="#infos">Horaires et adresse</a>
+</div>
+
 <div class="mz">Maquette <b>Mazx web</b>, pas le site officiel · <a href="tel:0636408522">06 36 40 85 22</a></div>
 
 <script>
@@ -450,8 +524,90 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
   var nails=document.getElementById('nails'),bs=document.querySelectorAll('.chips button');
   function pick(f){nails.dataset.f=f;bs.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.f===f)});
     document.getElementById('fName').textContent=F[f][0];document.getElementById('fDesc').textContent=F[f][1];document.getElementById('fPrice').textContent=F[f][2]}
-  bs.forEach(function(b){b.querySelector('.sw').parentNode.dataset.f=b.dataset.f;b.addEventListener('click',function(){pick(b.dataset.f)})});
+  bs.forEach(function(b){b.querySelector('.sw').parentNode.dataset.f=b.dataset.f;b.addEventListener('click',function(){if(window.feeApply)window.feeApply(b.dataset.f,pick,F[b.dataset.f][0]);else pick(b.dataset.f)})});
   pick('chrome');
+})();
+
+
+/* la fée d'Amélie : elle arrive sur le logo, puis accompagne la visite */
+(function(){
+  var fee=document.getElementById('fee'),bul=document.getElementById('bulle'),bt=document.getElementById('bulleTxt'),menu=document.getElementById('feeMenu'),medal=document.getElementById('medal');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cv=document.getElementById('trail'),x=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2),W,H,P=[];
+  var pos={x:-300,y:-300},state='intro',flying=null,last=0,hideT=0,said={};
+  function size(){W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0)}
+  size();
+  function fw(){return fee.offsetWidth}function fh(){return fee.offsetHeight}
+  function c2tl(cx,cy){return{x:cx-fw()/2,y:cy-fh()/2}}
+  function dock(){var m=innerWidth<900;return{x:innerWidth-fw()-(m?8:22),y:innerHeight-fh()-(m?52:62)}}
+  function place(p){pos={x:p.x,y:p.y};fee.style.setProperty('--fx',p.x+'px');fee.style.setProperty('--fy',p.y+'px')}
+  function tip(){var w=fw(),tx=140/160*w,ty=22/175*fh();if(fee.classList.contains('flip'))tx=w-tx;return{x:pos.x+tx,y:pos.y+ty}}
+  function emit(n,cx,cy,sp){for(var i=0;i<n;i++)P.push({x:cx+(Math.random()-.5)*sp,y:cy+(Math.random()-.5)*sp,vx:(Math.random()-.5)*.7,vy:Math.random()*.6+.25,r:Math.random()*1.7+.6,l:1,d:Math.random()*.012+.011,s:Math.random()<.3})}
+  function burst(cx,cy,n,sp){for(var i=0;i<n;i++){var a=Math.random()*6.283,v=Math.random()*3.2+.8;P.push({x:cx+(Math.random()-.5)*(sp||0),y:cy,vx:Math.cos(a)*v,vy:Math.sin(a)*v-1,r:Math.random()*2+.8,l:1,d:Math.random()*.014+.012,s:Math.random()<.4,g:1})}}
+  function star(px,py,r){x.beginPath();x.moveTo(px,py-r*3);x.quadraticCurveTo(px,py,px+r*3,py);x.quadraticCurveTo(px,py,px,py+r*3);x.quadraticCurveTo(px,py,px-r*3,py);x.quadraticCurveTo(px,py,px,py-r*3);x.fill()}
+  function cr(pts,t){var n=pts.length-1,s=t*n,i=Math.min(n-1,Math.floor(s)),u=s-i,p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(n,i+2)];
+    function c(a,b,d,e){return .5*(2*b+(-a+d)*u+(2*a-5*b+4*d-e)*u*u+(-a+3*b-3*d+e)*u*u*u)}
+    return{x:c(p0.x,p1.x,p2.x,p3.x),y:c(p0.y,p1.y,p2.y,p3.y)}}
+  function frame(t){
+    if(flying){var k=Math.min(1,(t-flying.t0)/flying.dur),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2,p=cr(flying.pts,e),dx=p.x-pos.x;
+      if(Math.abs(dx)>.8)fee.classList.toggle('flip',dx<0);place(p);var tp=tip();emit(2,tp.x,tp.y,6);
+      (flying.marks||[]).forEach(function(m){if(!m.done&&e>=m.at){m.done=1;m.fn()}});
+      if(k>=1){var f=flying;flying=null;fee.classList.remove('flying');if(f.done)f.done()}}
+    else if(state==='dock'&&t-last>650){last=t;var q=tip();emit(1,q.x,q.y,5)}
+    x.clearRect(0,0,W,H);
+    for(var i=P.length-1;i>=0;i--){var q=P[i];q.x+=q.vx;q.y+=q.vy;if(q.g){q.vx*=.95;q.vy=q.vy*.95+.06}q.l-=q.d;if(q.l<=0){P.splice(i,1);continue}
+      x.globalAlpha=q.l;x.fillStyle=q.s?'#fff8e6':'#d2aa5e';if(q.s)star(q.x,q.y,q.r*.9);else{x.beginPath();x.arc(q.x,q.y,q.r*(.4+.6*q.l),0,6.283);x.fill()}}
+    x.globalAlpha=1;requestAnimationFrame(frame)}
+  function fly(pts,dur,marks,done){hide();closeMenu();fee.classList.add('flying');state='fly';
+    flying={pts:[{x:pos.x,y:pos.y}].concat(pts),dur:dur,t0:performance.now(),marks:marks,done:done}}
+  function docked(){state='dock';fee.classList.add('flip')}
+  function goDock(cb){fly([dock()],950,null,function(){docked();if(cb)cb()})}
+  function say(msg,ms){if(state!=='dock'||menu.classList.contains('on'))return;bt.textContent=msg;bul.classList.add('on');clearTimeout(hideT);hideT=setTimeout(hide,ms||5600)}
+  function hide(){bul.classList.remove('on')}
+  function closeMenu(){menu.classList.remove('on');fee.setAttribute('aria-expanded','false')}
+
+  function hours(){var d=new Date(),j=d.getDay(),m=d.getHours()*60+d.getMinutes(),o=j===1?570:540;
+    if(j===0||j===6)return 'Le salon est fermé le week-end : envoyez un SMS à Amélie pour réserver votre moment.';
+    if(m<o)return 'Le salon ouvre à '+(j===1?'9 h 30':'9 h')+' aujourd’hui. Un SMS à Amélie en attendant ?';
+    if(m<1080)return 'C’est ouvert jusqu’à 18 h : un appel suffit pour réserver.';
+    return 'Le salon est fermé pour ce soir : laissez un SMS à Amélie pour réserver.'}
+  var MSG={hello:'Bonjour ! Je vous accompagne pendant la visite. Touchez-moi si vous cherchez quelque chose.',
+    prestations:'Psst… pour les fidèles, la dépose + repose est offerte.',
+    'avant-apres':'Faites glisser la photo : c’est la même main, avant et après.',
+    nuancier:'Choisissez une couleur, je m’occupe de la poser.',
+    creations:'Toutes ces poses sont signées Amélie.',
+    avis:'5 étoiles sur Google : les clientes en parlent mieux que moi.',infos:null};
+
+  /* entrée : elle fait le tour du logo et le touche de sa baguette */
+  function intro(){var r=medal.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,R=r.width/2;
+    if(reduce||scrollY>80||r.bottom<0||r.top>innerHeight){place(dock());docked();setTimeout(function(){say(MSG.hello)},900);return}
+    place(c2tl(-90,cy-R*.4));
+    fly([c2tl(cx-R*1.15,cy+R*.15),c2tl(cx-R*.75,cy-R*1.05),c2tl(cx+R*.2,cy-R*1.22),c2tl(cx+R*1.12,cy-R*.35),c2tl(cx+R*.95,cy+R*.85),dock()],4600,
+      [{at:.47,fn:function(){var q=tip();burst(q.x,q.y,70);medal.classList.add('glow')}}],
+      function(){docked();say(MSG.hello)})}
+
+  /* nuancier : la fée vient poser la couleur */
+  window.feeApply=function(f,pick,name){var st=document.querySelector('.stage').getBoundingClientRect();
+    if(reduce||state!=='dock'||st.bottom<60||st.top>innerHeight-60){pick(f);return}
+    var nx=st.left+st.width/2,ny=st.top+st.height*.62,w=fw(),h=fh();
+    fly([{x:nx+w*.2,y:st.top-h*.15},{x:nx-w*.9,y:ny-h*.95}],950,
+      [{at:.82,fn:function(){burst(nx,ny-20,90,st.width*.5);pick(f)}}],
+      function(){setTimeout(function(){goDock(function(){say('Et voilà : '+name+' !',3800)})},350)})};
+
+  fee.addEventListener('click',function(){if(state!=='dock')return;var open=!menu.classList.contains('on');hide();
+    menu.classList.toggle('on',open);fee.setAttribute('aria-expanded',String(open));if(open){var q=tip();burst(q.x,q.y,24)}});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))closeMenu()});
+  document.addEventListener('click',function(e){if(!e.target.closest('#fee,#feeMenu'))closeMenu()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();hide()}});
+  addEventListener('resize',function(){size();if(state==='dock')place(dock())});
+
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(en){var k=en.target.dataset.fee;
+      if(en.isIntersecting&&!said[k]&&state==='dock'&&!menu.classList.contains('on')){said[k]=1;say(MSG[k]||hours())}})},{threshold:.35});
+    document.querySelectorAll('[data-fee]').forEach(function(el){io.observe(el)})}
+
+  requestAnimationFrame(frame);
+  function go(){setTimeout(intro,reduce?0:900)}
+  if(document.readyState==='complete')go();else addEventListener('load',go);
 })();
 
 /* poussière d'or : paillettes qui scintillent doucement dans le hero */
