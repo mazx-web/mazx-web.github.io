@@ -77,10 +77,10 @@ h2 em{color:var(--clay)}
 /* ---------- studio : color lab ---------- */
 .studio{background:linear-gradient(180deg,var(--sand),#f6e3d6)}
 .lab{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center;margin-top:40px}
-.hand-wrap{position:relative;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%;border-radius:50%;background:radial-gradient(circle at 50% 60%,#fff6ec,#f3d6c4 70%);display:grid;place-items:center;box-shadow:inset 0 0 60px rgba(181,88,63,.12)}
+.hand-wrap{position:relative;aspect-ratio:1;max-width:460px;margin:0 auto;width:100%;border-radius:50%;background:radial-gradient(circle at 50% 45%,#fffaf5,#f7e2d5 75%);display:grid;place-items:center;box-shadow:inset 0 0 60px rgba(181,88,63,.12)}
 .hand-wrap::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px dashed rgba(181,88,63,.3);animation:spin2 50s linear infinite}
 @keyframes spin2{to{transform:rotate(360deg)}}
-svg.hand{width:78%;height:auto;overflow:visible}
+svg.hand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;height:98%;height:auto;overflow:visible}
 .nail{fill:var(--nail);transition:fill .6s cubic-bezier(.2,.8,.2,1)}
 .nail-shine{fill:#fff;opacity:var(--shine);transition:opacity .5s}
 .glitter{opacity:0;transition:opacity .5s}
@@ -210,26 +210,24 @@ footer b{color:var(--cream);font-family:Fraunces,serif;font-weight:400;font-size
     <p class="lead reveal">Touchez une couleur, puis une finition : la main se pare en direct. Une idée de ce que vous aimez avant même d'arriver.</p>
     <div class="lab">
       <div class="hand-wrap reveal" id="handWrap">
-        <svg class="hand" viewBox="0 0 300 300" aria-label="Main avec vernis">
-          <defs>
-            <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d2bd"/><stop offset="1" stop-color="#e8b49a"/></linearGradient>
-            <pattern id="gl" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#fff"/><circle cx="6" cy="5" r=".7" fill="#ffe6b0"/></pattern>
-          </defs>
-          <!-- palm -->
-          <path d="M92 300 C88 250 80 215 96 188 L210 188 C228 214 222 255 214 300 Z" fill="url(#skin)"/>
-          <!-- thumb -->
-          <g transform="rotate(-38 92 200)"><rect x="74" y="128" width="38" height="90" rx="19" fill="url(#skin)"/>
-            <g class="n"><rect class="nail" x="80" y="132" width="26" height="32" rx="12"/><rect class="french-tip" x="80" y="132" width="26" height="9" rx="5"/><rect class="glitter" x="80" y="132" width="26" height="32" rx="12" fill="url(#gl)"/><rect class="nail-shine" x="85" y="137" width="5" height="16" rx="2.5"/></g></g>
-          <!-- fingers -->
-          <g><rect x="100" y="70" width="34" height="140" rx="17" fill="url(#skin)"/>
-            <rect class="nail" x="105" y="74" width="24" height="32" rx="11"/><rect class="french-tip" x="105" y="74" width="24" height="9" rx="5"/><rect class="glitter" x="105" y="74" width="24" height="32" rx="11" fill="url(#gl)"/><rect class="nail-shine" x="110" y="79" width="4.5" height="16" rx="2.2"/></g>
-          <g><rect x="137" y="50" width="34" height="160" rx="17" fill="url(#skin)"/>
-            <rect class="nail" x="142" y="54" width="24" height="33" rx="11"/><rect class="french-tip" x="142" y="54" width="24" height="9" rx="5"/><rect class="glitter" x="142" y="54" width="24" height="33" rx="11" fill="url(#gl)"/><rect class="nail-shine" x="147" y="59" width="4.5" height="16" rx="2.2"/></g>
-          <g><rect x="174" y="62" width="33" height="148" rx="16.5" fill="url(#skin)"/>
-            <rect class="nail" x="178.5" y="66" width="24" height="32" rx="11"/><rect class="french-tip" x="178.5" y="66" width="24" height="9" rx="5"/><rect class="glitter" x="178.5" y="66" width="24" height="32" rx="11" fill="url(#gl)"/><rect class="nail-shine" x="183.5" y="71" width="4.5" height="16" rx="2.2"/></g>
-          <g><rect x="209" y="96" width="29" height="118" rx="14.5" fill="url(#skin)"/>
-            <rect class="nail" x="213" y="100" width="21" height="27" rx="10"/><rect class="french-tip" x="213" y="100" width="21" height="8" rx="4"/><rect class="glitter" x="213" y="100" width="21" height="27" rx="10" fill="url(#gl)"/><rect class="nail-shine" x="217.5" y="104" width="4" height="13" rx="2"/></g>
-        </svg>
+        <svg class="hand" viewBox="78 64 216 296" aria-label="Main avec vernis">
+<defs>
+<linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d9c6"/><stop offset=".6" stop-color="#efc3a8"/><stop offset="1" stop-color="#e2a98d"/></linearGradient>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset=".72" stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<mask id="wristfade"><rect x="0" y="0" width="320" height="360" fill="url(#fade)"/></mask>
+<pattern id="gl" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".9" fill="#fff"/><circle cx="5.5" cy="5" r=".6" fill="#ffe6b0"/></pattern>
+<radialGradient id="pshade" cx=".35" cy=".25" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#c98d72" stop-opacity=".22"/></radialGradient>
+<filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#b5583f" flood-opacity=".32"/></filter>
+</defs>
+<g filter="url(#soft)" mask="url(#wristfade)">
+<g transform="translate(212 262) rotate(46)"><path d="M-15.5,0 C-15.5,-43.0 -13.5,-71.0 -12.5,-73.5 Q-12.5,-88 0,-88 Q12.5,-88 12.5,-73.5 C13.5,-71.0 15.5,-43.0 15.5,0 Z" fill="#efc3a8"/><path d=" M-4.96,-60.199999999999996 Q0,-61.919999999999995 4.96,-60.199999999999996" fill="none" stroke="#c98d72" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/><path class="nail" d="M-9.0,-71 C-9.5,-81.5 -5.76,-94 0,-97 C5.76,-94 9.5,-81.5 9.0,-71 Q0,-67.5 -9.0,-71 Z"/><path class="french-tip" d="M-6.4799999999999995,-86.08 Q0,-87.64 6.4799999999999995,-86.08 C4.5,-91 2.16,-96 0,-97 C-2.16,-96 -4.5,-91 -6.4799999999999995,-86.08 Z"/><path class="glitter" d="M-9.0,-71 C-9.5,-81.5 -5.76,-94 0,-97 C5.76,-94 9.5,-81.5 9.0,-71 Q0,-67.5 -9.0,-71 Z" fill="url(#gl)"/><path class="nail-shine" d="M-3.96,-74 C-4.68,-78.5 -2.88,-89.2 -1.08,-91.28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(126 214) rotate(-12)"><path d="M-12.0,0 C-12.0,-46.0 -10.75,-80.3 -9.75,-82.25 Q-9.75,-94 0,-94 Q9.75,-94 9.75,-82.25 C10.75,-80.3 12.0,-46.0 12.0,0 Z" fill="#efc3a8"/><path d="M-5.28,-38.64 Q0,-41.4 5.28,-38.64 M-3.84,-64.39999999999999 Q0,-66.24 3.84,-64.39999999999999" fill="none" stroke="#c98d72" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/><path class="nail" d="M-7.5,-79 C-8.0,-88.1 -4.8,-99 0,-102 C4.8,-99 8.0,-88.1 7.5,-79 Q0,-75.5 -7.5,-79 Z"/><path class="french-tip" d="M-5.3999999999999995,-92.34 Q0,-93.72 5.3999999999999995,-92.34 C3.75,-96 1.7999999999999998,-101 0,-102 C-1.7999999999999998,-101 -3.75,-96 -5.3999999999999995,-92.34 Z"/><path class="glitter" d="M-7.5,-79 C-8.0,-88.1 -4.8,-99 0,-102 C4.8,-99 8.0,-88.1 7.5,-79 Q0,-75.5 -7.5,-79 Z" fill="url(#gl)"/><path class="nail-shine" d="M-3.3,-82 C-3.9000000000000004,-85.5 -2.4,-95.1 -0.8999999999999999,-96.94" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(150 206) rotate(-4)"><path d="M-13.5,0 C-13.5,-61.0 -11.75,-109.1 -10.75,-111.25 Q-10.75,-124 0,-124 Q10.75,-124 10.75,-111.25 C11.75,-109.1 13.5,-61.0 13.5,0 Z" fill="#efc3a8"/><path d="M-5.94,-51.239999999999995 Q0,-54.9 5.94,-51.239999999999995 M-4.32,-85.39999999999999 Q0,-87.84 4.32,-85.39999999999999" fill="none" stroke="#c98d72" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/><path class="nail" d="M-8.25,-107 C-8.75,-117.5 -5.28,-130 0,-133 C5.28,-130 8.75,-117.5 8.25,-107 Q0,-103.5 -8.25,-107 Z"/><path class="french-tip" d="M-5.9399999999999995,-122.08 Q0,-123.64 5.9399999999999995,-122.08 C4.125,-127 1.98,-132 0,-133 C-1.98,-132 -4.125,-127 -5.9399999999999995,-122.08 Z"/><path class="glitter" d="M-8.25,-107 C-8.75,-117.5 -5.28,-130 0,-133 C5.28,-130 8.75,-117.5 8.25,-107 Q0,-103.5 -8.25,-107 Z" fill="url(#gl)"/><path class="nail-shine" d="M-3.63,-110 C-4.29,-114.5 -2.64,-125.2 -0.99,-127.28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(175 204) rotate(3)"><path d="M-14.0,0 C-14.0,-65.0 -12.25,-116.5 -11.25,-118.75 Q-11.25,-132 0,-132 Q11.25,-132 11.25,-118.75 C12.25,-116.5 14.0,-65.0 14.0,0 Z" fill="#efc3a8"/><path d="M-6.16,-54.6 Q0,-58.5 6.16,-54.6 M-4.48,-91.0 Q0,-93.6 4.48,-91.0" fill="none" stroke="#c98d72" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/><path class="nail" d="M-8.5,-114.5 C-9.0,-125.35 -5.44,-139 0,-142 C5.44,-139 9.0,-125.35 8.5,-114.5 Q0,-111.0 -8.5,-114.5 Z"/><path class="french-tip" d="M-6.12,-130.45 Q0,-132.1 6.12,-130.45 C4.25,-136 2.04,-141 0,-142 C-2.04,-141 -4.25,-136 -6.12,-130.45 Z"/><path class="glitter" d="M-8.5,-114.5 C-9.0,-125.35 -5.44,-139 0,-142 C5.44,-139 9.0,-125.35 8.5,-114.5 Q0,-111.0 -8.5,-114.5 Z" fill="url(#gl)"/><path class="nail-shine" d="M-3.74,-117.5 C-4.42,-122.25 -2.72,-133.75 -1.02,-135.95" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+<g transform="translate(200 208) rotate(10)"><path d="M-13.5,0 C-13.5,-59.0 -11.75,-105.1 -10.75,-107.25 Q-10.75,-120 0,-120 Q10.75,-120 10.75,-107.25 C11.75,-105.1 13.5,-59.0 13.5,0 Z" fill="#efc3a8"/><path d="M-5.94,-49.559999999999995 Q0,-53.1 5.94,-49.559999999999995 M-4.32,-82.6 Q0,-84.96 4.32,-82.6" fill="none" stroke="#c98d72" stroke-opacity=".35" stroke-width="1.2" stroke-linecap="round"/><path class="nail" d="M-8.25,-103 C-8.75,-113.5 -5.28,-126 0,-129 C5.28,-126 8.75,-113.5 8.25,-103 Q0,-99.5 -8.25,-103 Z"/><path class="french-tip" d="M-5.9399999999999995,-118.08 Q0,-119.64 5.9399999999999995,-118.08 C4.125,-123 1.98,-128 0,-129 C-1.98,-128 -4.125,-123 -5.9399999999999995,-118.08 Z"/><path class="glitter" d="M-8.25,-103 C-8.75,-113.5 -5.28,-126 0,-129 C5.28,-126 8.75,-113.5 8.25,-103 Q0,-99.5 -8.25,-103 Z" fill="url(#gl)"/><path class="nail-shine" d="M-3.63,-106 C-4.29,-110.5 -2.64,-121.2 -0.99,-123.28" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/></g>
+<path d="M116,214 C113,192 124,179 142,178 L198,177 C213,177 222,188 224,204 C230,221 228,241 218,259 C208,277 202,297 200,360 L126,360 C126,312 118,280 113,254 C110,238 114,226 116,214 Z" fill="#efc3a8"/>
+</g>
+</svg>
       </div>
       <div class="ctrl reveal">
         <h3>Votre nuancier</h3>
